@@ -1,0 +1,143 @@
+.Testimonial_container{
+    height: auto;
+    width: auto;
+    color: var(--text-primary);
+
+    .Testimonial_wrapper{
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        gap: 50px;
+        // padding: 0 5rem;
+
+        .Testimonial_left_container{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .Testimonial_left_header{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .Testimonial_left_heading{
+                    font-size: 44px;
+                    font-weight: bold;
+                    position: relative;
+                    display: inline-block;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 240px;
+                        height: 3px;
+                        background-color: var(--text-primary);
+                        bottom: -10px;
+                        left: 0;
+                    }
+                }
+                .Testimonial_left_para{
+                    font-size: 16px;
+                    line-height: 1.6;
+                    max-width: 90%;
+                    opacity: 0.8;
+                }
+            }
+            .Testimonial_left_body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+
+                .Testimonial_left_img {
+                    width: 500px;
+                    height: 370px;
+                    transition: var(--theme-transition);
+                    border-radius: 15px;
+                }
+            }
+            
+        }
+        .Testimonial_right_container{
+            flex: 1;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .avatar {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                background: #999;
+                margin: 0 auto 1rem;
+                }
+            
+                .name {
+                font-size: 2rem;
+                font-weight: bold;
+                text-decoration: underline;
+                margin: 0;
+                }
+            
+                .location {
+                font-size: 1.3rem;
+                margin-bottom: 1.5rem;
+                }
+            
+                .desc {
+                max-width: 400px;
+                margin: 0 auto;
+                font-size: 1.1rem;
+                text-align: center;
+                text-decoration: underline;
+                line-height: 1.8;
+                }
+            
+                .arrows {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 1rem;
+            
+                .arrow {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: white;
+                    color: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                }
+                }
+            
+                .dots {
+                margin-top: 2.5rem;
+            
+                .dot {
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    margin: 0 5px;
+                    background: #777;
+                    border-radius: 50%;
+                    cursor: pointer;
+            
+                    &.active {
+                    background: white;
+                    }
+                }
+                }
+        }
+    }
+}

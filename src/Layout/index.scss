@@ -1,0 +1,27 @@
+.Layout_container{
+    width: auto;
+    height: auto;
+
+    .layout_wrapper{
+        width: 100vw;
+        height: 100vh;
+
+        .Header{
+            width: 100vw;
+            height: 10vh;
+            background-color: var(--background-primary);
+            transition: var(--theme-transition);
+        }
+        .Layout_Body{
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+        .Footer{
+            width: 100vw;
+            height: 42vh;
+            background-color: #000;
+            transition: var(--theme-transition);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.Home_body_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .Body_Home{
+        flex: 1 0 95vh;
+        height: 80vh;
+        background-color: var(--background-primary);
+        transition: var(--theme-transition);
+    }
+    .Body_Experience{
+        flex: 1 0 90vh;
+        height: 80vh;
+        background-color: var(--background-primary);
+        transition: var(--theme-transition);
+    }
+    .Body_Projects{
+        flex: 1 0 254vh;
+        height: 80vh;
+        background-color: var(--background-primary);
+        transition: var(--theme-transition);
+    }
+    .Body_MySkills{
+        flex: 1 0 95vh;
+        height: 80vh;
+        background-color: var(--background-primary);
+        transition: var(--theme-transition);
+    }
+    .Body_Testimonial{
+        flex: 1 0 70vh;
+        height: 80vh;
+        background-color: var(--background-primary);
+        transition: var(--theme-transition);
+    }
+}

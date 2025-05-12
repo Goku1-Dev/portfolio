@@ -1,0 +1,68 @@
+.Menu_container {
+    width: 100%;
+    height: 100%;
+
+    .Menu_Wrapper {
+        position: fixed;
+        width: 100%;
+        height: 10%;
+        background-color: var(--background-primary);
+        transition: var(--theme-transition);
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+        z-index: 1;
+
+        .Menu_logo{
+            flex-grow: 1;
+            font-size: 2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 1rem;
+            transition: color 0.3s ease;
+            &:hover{
+                color: var(--text-secondary);
+            }
+        }
+
+        .Menu_item {
+            flex-grow: 1;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        
+            .Menu_link {
+                text-decoration: none;
+                color: var(--text-primary);
+                font-size: 18px;
+                font-weight: 500;
+                padding: 0.5rem;
+                transition: all 0.3s ease;
+        
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        .Menu_Search{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+
+        .Menu_item0{
+            display: none;
+        }
+
+
+        .Menu_Dark_Light {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+    }
+}
