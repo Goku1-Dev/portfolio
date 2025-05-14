@@ -20,11 +20,14 @@ import react from '../assets/reactjs.png'
 import project_img from '../assets/PROJECTS.svg'
 import Testimonial_img from '../assets/Testimonial.svg'
 import experience_img from '../assets/EXPERIENCE.svg'
+import project_img1 from '../assets/PROJECTS1.svg'
+import Testimonial_img1 from '../assets/Testimonial1.svg'
+import experience_img1 from '../assets/EXPERIENCE1.svg'
 
 
 
 export const imageFile = {
-    My_image, project_card, project_img, Testimonial_img, experience_img
+    My_image, project_card, project_img, Testimonial_img, experience_img, project_img1, Testimonial_img1, experience_img1
 };
 
 export const iconFile = {

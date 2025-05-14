@@ -1,7 +1,13 @@
 import { imageFile } from '../../../utils';
+import { useTheme } from '../../../context/ThemeContext';
 import './index.scss';
 
 export const Projects = () => {
+    const { isDarkMode } = useTheme();
+
+    // Use different images based on theme
+    const ProjectsImage = isDarkMode ? imageFile.project_img1 : imageFile.project_img;
+
     return (
         <div className="Projects_container">
             <div className="Projects_wrapper">
@@ -17,7 +23,7 @@ export const Projects = () => {
                             </p>
                         </div>
                         <div className="Projects_tittle_img_box">
-                            <img className='Projects_tittle_img' src={imageFile.project_img}  alt='Image' />
+                            <img className='Projects_tittle_img' src={ProjectsImage}  alt='Image' />
                         </div>
                         <div className="Projects_tittle_para">
                             <p>

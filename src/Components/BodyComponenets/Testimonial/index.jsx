@@ -1,6 +1,7 @@
 import { useState }  from 'react'
 import './index.scss';
 import { imageFile } from '../../../utils';
+import { useTheme } from '../../../context/ThemeContext';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
     const testimonials = [
@@ -31,7 +32,12 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
     ];
 
 const Testimonial = () => {
+    const { isDarkMode } = useTheme();
     const [index, setIndex] = useState(0);
+
+    // Use different images based on theme
+    const TestimonialImage = isDarkMode ? imageFile.Testimonial_img1 : imageFile.Testimonial_img;
+
 
     const handlePrev = () => {
         setIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
@@ -53,7 +59,7 @@ const Testimonial = () => {
                         </p>
                     </div>
                     <div className='Testimonial_left_body'>
-                        <img className='Testimonial_left_img' src={imageFile.Testimonial_img}  alt='Image' />
+                        <img className='Testimonial_left_img' src={TestimonialImage}  alt='Image' />
                     </div>
                 </div>
                 <div className='Testimonial_right_container'>

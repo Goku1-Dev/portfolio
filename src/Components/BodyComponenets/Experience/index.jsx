@@ -1,9 +1,15 @@
-// import React from 'react'
+// import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { imageFile } from '../../../utils';
+import { useTheme } from '../../../context/ThemeContext';
 import './index.scss';
 
 export const Experience = () => {
+  const { isDarkMode } = useTheme();
+  
+  // Use different images based on theme
+  const experienceImage = isDarkMode ? imageFile.experience_img1 : imageFile.experience_img;
+
   return (
     <div className="Experience_container">
       <div className="Experience_wrapper">
@@ -11,7 +17,7 @@ export const Experience = () => {
         <div className="Experience_header_container">
           <div className="Experience_header_wrapper">
             <div className='Experience_header_left'>
-              <img className='Experience_header_img' src={imageFile.experience_img}  alt='Image' />
+              <img className='Experience_header_img' src={experienceImage} alt='Experience Image' />
             </div>
             <div className='Experience_header_right'>
               <h2 className="Experience_header_right_heading">WORK EXPERIENCE</h2>
@@ -66,4 +72,3 @@ export const Experience = () => {
 };
 
 export default Experience;
-
